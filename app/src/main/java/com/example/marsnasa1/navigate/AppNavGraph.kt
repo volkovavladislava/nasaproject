@@ -45,7 +45,7 @@ fun AppNavGraph(apiKey: String) {
     val items = listOf(
         NavItem("Mars rover photos", "mars"),
         NavItem("Поиск", "search") ,
-        NavItem("Галерея", "photo")
+        NavItem("Избранное", "photo")
     )
     Scaffold(
         scaffoldState = scaffoldState,
@@ -118,7 +118,7 @@ fun AppNavGraph(apiKey: String) {
                 }
             }
             composable("search") {
-                Marsnasa1SearchScreen(){
+                Marsnasa1SearchScreen(apiKey){
                     navController.navigate("photo")
                 }
             }
